@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class PlayerMove : MonoBehaviour
 
     private float move_sp = 5f;
     private bool can_move;
-    private bool fin_move = true;
+    public bool fin_move = true;
 
     private Vector3 tar_pos = Vector3.zero;
     private Vector3 player_move = Vector3.zero;
@@ -33,9 +34,29 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move_Player();
-        cha_con.Move(player_move);
+        Calcul_Hei();
+        Check_fin_move();
     }
+
+    void Check_fin_move()
+    {
+        if(!fin_move)
+        {
+            if(!anim.IsInTransition(0)
+            && !anim.GetCurrentAnimatorStateInfo(0).IsName("Stand")
+            &&  anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.8f)
+            {
+                fin_move = true;
+            }
+        }
+        else
+        {
+            Move_Player();
+            player_move.y = height * Time.deltaTime;
+            col_flags = cha_con.Move(player_move);
+        }
+    }
+
     void Move_Player()
     {
         if(Input.GetMouseButton(0))
@@ -73,5 +94,24 @@ public class PlayerMove : MonoBehaviour
             player_move.Set(0f, 0f, 0f);
             anim.SetFloat("Walk", 0f);
         }
+    }
+    void Calcul_Hei()
+    {
+        if(Is_Grounded())
+        {
+            height = 0f;
+        }
+        else
+        {
+            height -= gravity * Time.deltaTime;
+        }
+    }
+    bool Is_Grounded()
+    {
+        if(col_flags == CollisionFlags.CollidedBelow)
+        {
+            return true;
+        }
+        return false;
     }
 }
