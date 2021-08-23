@@ -14,7 +14,7 @@ public class Destroy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, player.position) <= 1.2f)
+        if (Vector3.Distance(transform.position, player.position) <= 1.3f)
             Destroy(gameObject);
     }
 }
