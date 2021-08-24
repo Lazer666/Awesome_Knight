@@ -114,4 +114,26 @@ public class PlayerMove : MonoBehaviour
         }
         return false;
     }
+    public bool Fin_Move
+    {
+        get
+        {
+            return fin_move;
+        }
+        set
+        {
+            fin_move = value;
+        }
+    }
+    public Vector3 Tar_Pos
+    {
+        get
+        {
+            return tar_pos;
+        }
+        set
+        {
+            tar_pos = value;
+        }
+    }
 }
