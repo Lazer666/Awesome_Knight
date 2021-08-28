@@ -4814,7 +4814,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7170942876862717975}
   m_Layer: 0
-  m_Name: Hit Spawn
+  m_Name: Kick Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -6293,15 +6293,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundimpact_spawn: {fileID: 3911525953822535330}
-  hitFX_spawn: {fileID: 3655763891044023336}
+  kickFX_spawn: {fileID: 3655763891044023336}
   fire_tornado_spawn: {fileID: 5574463537768975666}
   fireshield_spawn: {fileID: 6958486906646178820}
   groundimpact_prefab: {fileID: 100014, guid: 2f8ef9eb56c6f1d46a58225698863a6f, type: 3}
-  hitFX_prefab: {fileID: 136674, guid: 8d3a7fbc62f810c43b8c42fdb2978ef4, type: 3}
+  kickFX_prefab: {fileID: 136674, guid: 8d3a7fbc62f810c43b8c42fdb2978ef4, type: 3}
   fire_tornado_prefab: {fileID: 1498625563617044, guid: 9ad77a006e79044fe86df522ebede5e4, type: 3}
   fireshield_prefab: {fileID: 1351438999312512, guid: b1ce49cd6652b40fdb4c9bc83ada15fc, type: 3}
   healFX_prefab: {fileID: 1820702659360474, guid: d3009f51c71e64cceb20222e458aab0f, type: 3}
-  lightningFX_prefab: {fileID: 1164094381172014, guid: d52235af7d56d4f148d6e52c8bc2c348, type: 3}
+  thunderAttackFX_prefab: {fileID: 1164094381172014, guid: d52235af7d56d4f148d6e52c8bc2c348, type: 3}
 --- !u!1 &4703503914277042504
 GameObject:
   m_ObjectHideFlags: 0
@@ -7372,7 +7372,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6958486906646178820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.35}
+  m_LocalPosition: {x: 0, y: -1.5, z: -0.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4703503914277004578}

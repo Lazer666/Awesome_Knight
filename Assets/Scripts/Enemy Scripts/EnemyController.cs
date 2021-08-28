@@ -34,9 +34,7 @@ public class EnemyController : MonoBehaviour
     private CharacterController char_controller;
     private Vector3 where_move = Vector3.zero;
 
-    private float current_time,
-                  wait_time;
-
+    // Attack variable
     private float current_atk_time,
                   wait_atk_time = 1f;
 
