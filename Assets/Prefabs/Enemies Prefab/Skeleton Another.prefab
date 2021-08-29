@@ -199,9 +199,10 @@ GameObject:
   - component: {fileID: 9110105804085593470}
   - component: {fileID: 8882898050880830796}
   - component: {fileID: 5539428032516004085}
-  m_Layer: 0
+  - component: {fileID: 1342909874473389766}
+  m_Layer: 6
   m_Name: Skeleton Another
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -295,6 +296,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 160a240b7924b31468bc9c5351d021fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walk_points:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &1342909874473389766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128286626036621168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02de3980878c22244851c9699af3f654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &2128306625004998720
 GameObject:
   m_ObjectHideFlags: 0

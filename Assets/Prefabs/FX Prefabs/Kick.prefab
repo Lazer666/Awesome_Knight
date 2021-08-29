@@ -9775,6 +9775,7 @@ GameObject:
   - component: {fileID: 19836898}
   - component: {fileID: 19945528}
   - component: {fileID: -6305406301764535735}
+  - component: {fileID: 6298108272571811283}
   m_Layer: 0
   m_Name: Kick
   m_TagString: Untagged
@@ -14599,6 +14600,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 1.5
+--- !u!114 &6298108272571811283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec58af8731ccf9f4e9ad547916d2d793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy_layer:
+    serializedVersion: 2
+    m_Bits: 64
+  radius: 0.3
+  damage_count: 15
 --- !u!1 &151822
 GameObject:
   m_ObjectHideFlags: 0
