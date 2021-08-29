@@ -8,7 +8,7 @@ public class Skill_Damage : MonoBehaviour
     public float radius = 0.5f, damage_count = 10f;
 
     private Enemy_Health enemy_health;
-    private bool colided;
+    private bool collided;
 
     // Update is called once per frame
     void Update()
@@ -17,9 +17,9 @@ public class Skill_Damage : MonoBehaviour
         foreach(Collider c in hits)
         {
             enemy_health = c.gameObject.GetComponent<Enemy_Health>();
-            colided = true;
+            collided = true;
         }
-        if(colided)
+        if(collided)
         {
             enemy_health.Take_Damage(damage_count);
             enabled = false;
