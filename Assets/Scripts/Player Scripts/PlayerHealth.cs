@@ -18,9 +18,11 @@ public class PlayerHealth : MonoBehaviour
         if (!isShielded)
         {
             health -= amount;
+            Debug.Log("Player took damage,health is " + health);
+
             if(health <= 0f)
             {
-
+                // player dies
             }
         }
     }
