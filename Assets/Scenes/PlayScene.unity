@@ -3308,6 +3308,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1342909874473389766, guid: a109ab6bf1b26af4dacca1e09574fff5, type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2126158726655658622, guid: a109ab6bf1b26af4dacca1e09574fff5, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -3356,6 +3360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton Another
       objectReference: {fileID: 0}
+    - target: {fileID: 2128286626036621168, guid: a109ab6bf1b26af4dacca1e09574fff5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5539428032516004085, guid: a109ab6bf1b26af4dacca1e09574fff5, type: 3}
       propertyPath: walk_points.Array.data[0]
       value: 
@@ -3374,24 +3382,24 @@ PrefabInstance:
       objectReference: {fileID: 1051985158}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a109ab6bf1b26af4dacca1e09574fff5, type: 3}
---- !u!1 &2958036620644752342 stripped
+--- !u!1 &1342909874473389762 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4703503914277042498, guid: 8d5c4f2893ebfe44a925b6789f41504e, type: 3}
-  m_PrefabInstance: {fileID: 7515167755197538964}
+  m_CorrespondingSourceObject: {fileID: 2128286626036621168, guid: a109ab6bf1b26af4dacca1e09574fff5, type: 3}
+  m_PrefabInstance: {fileID: 1093187251732042162}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2958036620644752351
+--- !u!114 &1342909874473389767
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2958036620644752342}
+  m_GameObject: {fileID: 1342909874473389762}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a590b38ca3b42cd4784c8318e4dd5bd7, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ed1e9281c819314ab5374f08e33cf0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  damage_amount: 10
 --- !u!1001 &6426414178243731357
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3447,6 +3455,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton
       objectReference: {fileID: 0}
+    - target: {fileID: 8503938138280115432, guid: 700fb744ae6defa42af0fb40427aef31, type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 700fb744ae6defa42af0fb40427aef31, type: 3}
 --- !u!1001 &7515167755197538964
@@ -3480,6 +3492,10 @@ PrefabInstance:
       propertyPath: img_fillwait_6
       value: 
       objectReference: {fileID: 1242315756}
+    - target: {fileID: 2958036620644752351, guid: 8d5c4f2893ebfe44a925b6789f41504e, type: 3}
+      propertyPath: health
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4703503914277004578, guid: 8d5c4f2893ebfe44a925b6789f41504e, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3530,3 +3546,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d5c4f2893ebfe44a925b6789f41504e, type: 3}
+--- !u!1 &8503938138280115428 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3398875265799381881, guid: 700fb744ae6defa42af0fb40427aef31, type: 3}
+  m_PrefabInstance: {fileID: 6426414178243731357}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8503938138280115433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8503938138280115428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed1e9281c819314ab5374f08e33cf0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage_amount: 10

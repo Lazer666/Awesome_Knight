@@ -46,6 +46,7 @@ public class EnemyController : MonoBehaviour
     private Vector3 where_navigate;
 
     //Health Script
+    private Enemy_Health enemy_health;
 
     // Start is called before the first frame update
     void Start()
@@ -54,14 +55,22 @@ public class EnemyController : MonoBehaviour
         nav_agent = GetComponent<NavMeshAgent>();
         char_controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
+        
         initial_pos = transform.position;
         where_navigate = transform.position;
+
+        enemy_health = GetComponent<Enemy_Health>();
     }
 
     // Update is called once per frame
     void Update()
     {
         // if HP <=0, State become death.
+        if(enemy_health.health <= 0f)
+        {
+            enemy_current_state = Enemy_State.Death;
+        }
+
         if(enemy_current_state != Enemy_State.Death)
         {
             enemy_current_state = SetEnemy_State(enemy_current_state,enemy_last_state,enemy_player_distance);
@@ -89,7 +98,8 @@ public class EnemyController : MonoBehaviour
             char_controller.enabled = false;
             nav_agent.enabled = false;
 
-            if(!anim.IsInTransition(0) && anim.GetCurrentAnimatorStateInfo(0).IsName("Death")
+            if(!anim.IsInTransition(0)
+             && anim.GetCurrentAnimatorStateInfo(0).IsName("Death")
              && anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.95f)
             {
                 Destroy(gameObject, 2f);

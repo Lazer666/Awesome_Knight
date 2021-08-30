@@ -16,21 +16,43 @@ public class EnemyController_easy : MonoBehaviour
     private float cur_atk_time, wait_atk_time = 1f;
 
     private Vector3 next_destination;
+
+    private Enemy_Health enemy_health;
     // Start is called before the first frame update
     void Start()
     {
         player_target = GameObject.FindGameObjectWithTag("Player").transform;
         anim = GetComponent<Animator>();
         nav_agent = GetComponent<NavMeshAgent>();
+        enemy_health = GetComponent<Enemy_Health>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector3.Distance(transform.position, player_target.position);
-        if(distance > walk_distance)
+        if(enemy_health.health > 0f)
         {
-            if(nav_agent.remainingDistance <= 0.5f)
+            Move_and_Attack();
+        }
+        else
+        {
+            anim.SetBool("Death", true);
+            nav_agent.enabled = false;
+
+            if (!anim.IsInTransition(0)
+             && anim.GetCurrentAnimatorStateInfo(0).IsName("Death")
+             && anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.95f)
+            {
+                Destroy(gameObject, 2f);
+            }
+        }
+    }
+    void Move_and_Attack()
+    {
+        float distance = Vector3.Distance(transform.position, player_target.position);
+        if (distance > walk_distance)
+        {
+            if (nav_agent.remainingDistance <= 0.5f)
             {
                 nav_agent.isStopped = false;
                 anim.SetBool("Walk", true);
@@ -48,7 +70,7 @@ public class EnemyController_easy : MonoBehaviour
         }
         else
         {
-            if(distance > atk_distance)
+            if (distance > atk_distance)
             {
                 nav_agent.isStopped = false;
                 anim.SetBool("Walk", false);
@@ -67,7 +89,7 @@ public class EnemyController_easy : MonoBehaviour
                 transform.rotation = Quaternion.Slerp(transform.rotation,
                                                       Quaternion.LookRotation(target_pos - transform.position),
                                                       5f * Time.deltaTime);
-                if(cur_atk_time >= wait_atk_time)
+                if (cur_atk_time >= wait_atk_time)
                 {
                     int atk_range = Random.Range(1, 3);
                     anim.SetInteger("Atk", atk_range);

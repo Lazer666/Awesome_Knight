@@ -6184,6 +6184,7 @@ GameObject:
   - component: {fileID: 1393377027148372039}
   - component: {fileID: 2958036620644752347}
   - component: {fileID: 2958036620644752349}
+  - component: {fileID: 2958036620644752351}
   m_Layer: 0
   m_Name: Black Knight
   m_TagString: Player
@@ -6302,6 +6303,19 @@ MonoBehaviour:
   fireshield_prefab: {fileID: 1351438999312512, guid: b1ce49cd6652b40fdb4c9bc83ada15fc, type: 3}
   healFX_prefab: {fileID: 1820702659360474, guid: d3009f51c71e64cceb20222e458aab0f, type: 3}
   thunderAttackFX_prefab: {fileID: 1164094381172014, guid: d52235af7d56d4f148d6e52c8bc2c348, type: 3}
+--- !u!114 &2958036620644752351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4703503914277042498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a590b38ca3b42cd4784c8318e4dd5bd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &4703503914277042504
 GameObject:
   m_ObjectHideFlags: 0
