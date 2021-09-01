@@ -22,8 +22,8 @@ public class Enemy_Health : MonoBehaviour
     public void Take_Damage(float amount)
     {
         health -= amount;
-        health_img.fillAmount = health / 100f;
-        
+        health_img.fillAmount = health / 100f; ;
+
         print("Enemy took damage, health is " + health);
 
         if(health <= 0)
