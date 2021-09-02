@@ -14,7 +14,10 @@ GameObject:
   - component: {fileID: 195992049912223466}
   - component: {fileID: 1129812746}
   - component: {fileID: 1129812751}
-  m_Layer: 8
+  - component: {fileID: 1129812752}
+  - component: {fileID: 1129812753}
+  - component: {fileID: 1129812754}
+  m_Layer: 6
   m_Name: Skeleton Boss
   m_TagString: Boss
   m_Icon: {fileID: 0}
@@ -124,7 +127,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02de3980878c22244851c9699af3f654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 300
+  health_img: {fileID: 114870125677233678}
+--- !u!114 &1129812752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 997f92722f2fc124784a1fc6ad2d76c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1129812753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ad747c8589fb44eac15ee105480f23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss_fire: {fileID: 1921226214802806, guid: 3809a810cd8104c2298ed6df026d4e23, type: 3}
+  boss_magic: {fileID: 1623750204401448, guid: 1319d9c3877eb41218bfb2b89a7d7276, type: 3}
+--- !u!114 &1129812754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed1e9281c819314ab5374f08e33cf0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage_amount: 20
 --- !u!1 &129830
 GameObject:
   m_ObjectHideFlags: 0
@@ -1852,7 +1895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1941,7 +1984,7 @@ MonoBehaviour:
   m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1913381228463424
@@ -2027,7 +2070,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &114230691818627518
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -126,56 +126,68 @@ public class PlayerAttack : MonoBehaviour
         //img_fade[0] meaning image thats at index 0 e.g. the first image
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            player_move.Tar_Pos = transform.position;
             if (player_move.Fin_Move && img_fade[0] != 1 && can_atk)
             {
                 img_fade[0] = 1;
                 anim.SetInteger("Atk", 1);
+
+                player_move.Tar_Pos = transform.position;
+                Remove_Cursor();
             }
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            player_move.Tar_Pos = transform.position;
             if (player_move.Fin_Move && img_fade[1] != 1 && can_atk)
             {
                 img_fade[1] = 1;
                 anim.SetInteger("Atk", 2);
+
+                player_move.Tar_Pos = transform.position;
+                Remove_Cursor();
             }
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            player_move.Tar_Pos = transform.position;
             if (player_move.Fin_Move && img_fade[2] != 1 && can_atk)
             {
                 img_fade[2] = 1;
                 anim.SetInteger("Atk", 3);
+
+                player_move.Tar_Pos = transform.position;
+                Remove_Cursor();
             }
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            player_move.Tar_Pos = transform.position;
             if (player_move.Fin_Move && img_fade[3] != 1 && can_atk)
             {
                 img_fade[3] = 1;
                 anim.SetInteger("Atk", 4);
+
+                player_move.Tar_Pos = transform.position;
+                Remove_Cursor();
             }
         }
         else if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            player_move.Tar_Pos = transform.position;
             if (player_move.Fin_Move && img_fade[4] != 1 && can_atk)
             {
                 img_fade[4] = 1;
                 anim.SetInteger("Atk", 5);
+
+                player_move.Tar_Pos = transform.position;
+                Remove_Cursor();
             }
         }
         else if (Input.GetMouseButtonDown(1))
         {
-            player_move.Tar_Pos = transform.position;
             if (player_move.Fin_Move && img_fade[5] != 1 && can_atk)
             {
                 img_fade[5] = 1;
                 anim.SetInteger("Atk", 6);
+
+                player_move.Tar_Pos = transform.position;
+                Remove_Cursor();
             }
         }
         else
@@ -199,5 +211,12 @@ public class PlayerAttack : MonoBehaviour
                                                   15f * Time.deltaTime);
         }
     }
-
+    void Remove_Cursor()
+    {
+        GameObject cursor_obj = GameObject.FindGameObjectWithTag("Cursor");
+        if (cursor_obj)
+        {
+            Destroy(cursor_obj);
+        }
+    }
 }
