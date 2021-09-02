@@ -6,19 +6,19 @@ using UnityEngine.UI;
 public class Enemy_Health : MonoBehaviour
 {
     public float health = 100f;
-    private Image health_img;
+    public Image health_img;
 
-    void Awake()
-    {
-        if(tag == "Boss")
-        {
-            health_img = GameObject.Find("Health Foreground Boss").GetComponent<Image>();
-        }
-        else
-        {
-            health_img = GameObject.Find("Health Foreground").GetComponent<Image>();
-        }
-    }
+    //void Awake()
+    //{
+    //    if (tag == "Boss")
+    //    {
+    //        health_img = GameObject.Find("Health Foreground Boss").GetComponent<Image>();
+    //    }
+    //    else
+    //    {
+    //        health_img = GameObject.Find("Health Foreground").GetComponent<Image>();
+    //    }
+    //}
     public void Take_Damage(float amount)
     {
         health -= amount;

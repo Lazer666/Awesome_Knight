@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     private bool isShielded;
 
     private Animator anim;
-    private Image health_img;
+    public Image health_img;
     void Awake()
     {
         anim = GetComponent<Animator>();

@@ -43,6 +43,7 @@ public class Boss_Control : MonoBehaviour
     {
         if(boss_state_checker.BossState == Boss_State.Death)
         {
+            nav_agent.isStopped = true;
             anim.SetBool("Death", true);
             Destroy(gameObject, 3f);
         }
@@ -67,6 +68,8 @@ public class Boss_Control : MonoBehaviour
                 {
                     int atk_range = Random.Range(1, 5);
                     anim.SetInteger("Atk", atk_range);
+                    current_atk_time = 0f;
+                    finished_atk = false;
                 }
                 else
                 {

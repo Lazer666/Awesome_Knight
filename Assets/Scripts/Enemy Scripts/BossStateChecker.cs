@@ -50,7 +50,7 @@ public class BossStateChecker : MonoBehaviour
             {
                 boss_state = Boss_State.None;
             }
-            if(boss_health.health <= 0f)
+            if (boss_health.health <= 0f)
             {
                 boss_state = Boss_State.Death;
             }
